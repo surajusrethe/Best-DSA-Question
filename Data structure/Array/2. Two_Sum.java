@@ -28,7 +28,7 @@ Approach 1: TC = O(n2) & SC = O(1)
 */
 
 
-Approach 2:  TC = O(n) & SC = (On)
+Approach 2:  TC = O(n) & SC = O(1)
 
 class Solution 
 {
