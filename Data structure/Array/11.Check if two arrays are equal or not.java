@@ -68,18 +68,11 @@ class Solution
         // Check if all elements in array B are present in array A with the same frequency
         for (int i = 0; i < n; i++) 
         {
-            if (!map.containsKey(B[i])) 
+            if (!map.containsKey(B[i]) || map.get(B[i]) == 0) 
             {
                 // If an element in B is not present in A, arrays are not equal
                 return false; 
             } 
-            else 
-            {
-                if (map.get(B[i]) == 0) 
-                {
-                    // If frequency of an element in B is 0 in A, arrays are not equal
-                    return false; 
-                } 
                 else 
                 {
                     // Decrement the frequency of the element in A
