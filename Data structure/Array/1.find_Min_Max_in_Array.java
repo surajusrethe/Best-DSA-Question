@@ -74,7 +74,7 @@ class Compute {
         }
         
         // Return a pair object containing the minimum and maximum values
-       return new pair<>(min, max);
+       return new pair(min, max);
     } 
 }
 
