@@ -13,6 +13,19 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 /*
 - The depth of a node in a binary tree is the number of edges from the root to that node.
 -  The height of a binary tree is the maximum depth of any node in the tree.
+
+Here is the approach and logic to find the height of a binary tree:
+
+If the root node is null, return 0 as the height of an empty tree is 0.
+
+Recursively find the height of the left and right subtrees.
+
+The height of a tree is equal to 1 plus the maximum height of its left and right subtrees.
+
+Return the maximum of the height of the left subtree and the height of the right subtree plus 1.
+
+
+
 */
 
 /****************************************************************** CODE *********************************************************************************/
@@ -31,52 +44,18 @@ class Solution {
 /****************************************************************** DRY RUN *********************************************************************************/
 
 /*
-        3
-       / \
-      9  20
-        /  \
-       15   7
+                         maxDepth(root)
+                          /     \
+                         /       \
+     maxDepth(root.left)        maxDepth(root.right)
+            /     \                  /       \
+           /       \                /         \
+maxDepth(...) maxDepth(...) maxDepth(...) maxDepth(...)
 
-          
-          
-          maxDepth(3):
-    root = 3
-    root is not null, continue
-    leftDepth = maxDepth(9):
-        root = 9
-        root is not null, continue
-        leftDepth = maxDepth(null):
-            return 0
-        rightDepth = maxDepth(null):
-            return 0
-        return Math.max(0, 0) + 1 = 1
-    rightDepth = maxDepth(20):
-        root = 20
-        root is not null, continue
-        leftDepth = maxDepth(15):
-            root = 15
-            root is not null, continue
-            leftDepth = maxDepth(null):
-                return 0
-            rightDepth = maxDepth(null):
-                return 0
-            return Math.max(0, 0) + 1 = 1
-        rightDepth = maxDepth(7):
-            root = 7
-            root is not null, continue
-            leftDepth = maxDepth(null):
-                return 0
-            rightDepth = maxDepth(null):
-                return 0
-            return Math.max(0, 0) + 1 = 1
-        return Math.max(1, 1) + 1 = 2
-    return Math.max(1, 2) + 1 = 3
-                  
-Therefore, the maximum depth of the tree is 3.
+
+Each node in the tree represents a call to the maxDepth() function with a particular subtree as the root. The left child of a node represents the left subtree of the current root, and the right child represents the right subtree. The leaves of the tree correspond to the base case of the recursive function, where the current root is null.
+
+The function calculates the maximum depth of the tree by recursively computing the maximum depth of each subtree and returning the maximum depth among the left and right subtrees, plus one for the current root.
+
 
 */
-
-
-
-
-
