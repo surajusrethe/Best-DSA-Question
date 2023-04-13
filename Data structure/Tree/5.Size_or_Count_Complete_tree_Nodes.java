@@ -35,6 +35,25 @@ class Solution {
 
 /*
 
+                                countNodes(1)
+                                      |
+                 ---------------------------------------------
+                |                                              |
+           countNodes(2)                                   countNodes(3)
+                |                                              |
+         --------------                              --------------
+        |              |                            |              |
+ countNodes(4)  countNodes(5)                 countNodes(6)  countNodes(7)
+        |              |                            |              |
+        0              0                            0              0
+
+At each level of the recursion tree, we call countNodes on the left and right child nodes of the current node until we reach the base case (i.e., a null node),
+at which point we return 0. We then add up the counts returned by the left and right subtree calls, along with 1 for the current node, and return that value to the
+parent call.
+
+
+
+
 Here's how the function returns the count of nodes for each node in the binary tree:
 
 For node 4, the function returns 1 (since it has no children)
