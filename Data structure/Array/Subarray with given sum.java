@@ -89,51 +89,33 @@ class Solution
 /*
 
 Input:
-arr = {5, 6, 8, 7, 9, 4, 1, 2}
-n = 8
-s = 14
+arr = [1, 2, 3, 7, 5]
+n = 5
+s = 12
 
 Output:
-[1, 3]
+[2, 4]
 
-1. Initialize left pointer, right pointer, and sum to 0: left = 0, right = 0, sum = 0.
-2. Start the loop until the right pointer reaches the end of the array: right < n.
-   a. Expand the window by adding the element at the right pointer to the current window: sum += arr[right].
-   b. If sum is greater than s, contract the window by removing elements from the window until sum is less than or equal to s.
-      i.  While sum is greater than s and left pointer is less than or equal to the right pointer, remove the element at the left pointer from the current window and increment the left pointer: sum -= arr[left]; left++.
-   c. If sum is equal to s, add the starting and ending indices of the subarray to the result and return the result: result.add(left+1); result.add(right+1); return result.
-   d. Move the right pointer to the next element and continue the loop: right++.
-3. If no subarray is found, add -1 to the result and return the result: result.add(-1); return result.
+1. Initialize an empty ArrayList `res` to store the starting and ending index of the subarray
+2. Check if `s` is equal to 0
+   a. If it is, add -1 to `res` and return it
+3. Initialize `left`, `right`, and `sum` to 0
+4. While `right` is less than `n`:
+   a. Add `arr[right]` to `sum`
+   b. While `sum` is greater than `s`:
+      i.  Subtract `arr[left]` from `sum`
+      ii. Increment `left`
+   c. If `sum` is equal to `s`, add `left+1` and `right+1` to `res` and return it
+   d. Increment `right`
+5. If no subarray with a sum of `s` is found, add -1 to `res` and return it
 
-Iteration 1:
-left = 0, right = 0, sum = 0, arr[right] = 5
-sum += arr[right] => sum = 5
-right++ => right = 1
+Intermediate values of `left`, `right`, `sum`, and `res` are shown below:
 
-Iteration 2:
-left = 0, right = 1, sum = 5, arr[right] = 6
-sum += arr[right] => sum = 11
-right++ => right = 2
-
-Iteration 3:
-left = 0, right = 2, sum = 11, arr[right] = 8
-sum += arr[right] => sum = 19
-sum > s, so contract the window:
-sum -= arr[left] => sum = 14
-left++ => left = 1
-sum > s, so contract the window:
-sum -= arr[left] => sum = 8
-left++ => left = 2
-sum <= s, continue to next iteration
-right++ => right = 3
-
-Iteration 4:
-left = 2, right = 3, sum = 8, arr[right] = 7
-sum += arr[right] => sum = 15
-sum == s, add starting and ending indices to the result and return the result:
-result.add(left+1) => result = [3]
-result.add(right+1) => result = [3, 4]
-return result => [3, 4]
-
+| left | right | sum | res |
+|------|-------|-----|-----|
+| 0    | 0     | 1   | []  |
+| 0    | 1     | 3   | []  |
+| 0    | 2     | 6   | []  |
+| 1    | 3     | 5   | [2, 4] |
 
 */
