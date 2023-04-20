@@ -61,20 +61,29 @@ class Solution
 /****************************** Dry run ***************************/
 
 
-Input: {2, 0, 2, 1, 1, 0}
-
-low = 0, mid = 0, high = 5
-nums[mid] = 2, so swap nums[mid] with nums[high] and decrement high
-{2, 0, 2, 1, 1, 0} -> {2, 0, 1, 1, 2, 0}
-nums[mid] = 2, so swap nums[mid] with nums[high] and decrement high
-{2, 0, 1, 1, 2, 0} -> {2, 0, 1, 2, 1, 0}
-nums[mid] = 1, so increment mid
-nums[mid] = 1, so increment mid
-nums[mid] = 2, so swap nums[mid] with nums[high] and decrement high
-{2, 0, 1, 2, 1, 0} -> {0, 0, 1, 2, 1, 2}
-nums[mid] = 1, so increment mid
-nums[mid] = 0, so swap nums[mid] with nums[low] and increment both low and mid
-{0, 0, 1, 2, 1, 2} -> {0, 2, 1, 2, 1, 0}
-nums[mid] = 1, so increment mid
-mid > high, so exit while loop
-Print sorted array: {0, 0, 1, 1, 2, 2}
+/*
+visualizes the dry run of the code with the example array of [1, 0, 2, 1, 0]:
+Initial state: [1, 0, 2, 1, 0]
+                   ^        ^ 
+                  low     high
+                  mid
+   [1, 0, 2, 1, 0]
+    ^        ^ 
+   low     high
+   mid
+   [0, 1, 2, 1, 0]
+       ^  ^  ^ 
+      low mid high
+   [0, 1, 0, 1, 2]
+          ^  ^  
+         mid high
+       ^  ^
+      low high
+   [0, 0, 1, 1, 2]
+         ^  ^  
+        mid high
+         ^  ^
+        low high
+   Sorted array: [0, 0, 1, 1, 2]
+   
+   */
