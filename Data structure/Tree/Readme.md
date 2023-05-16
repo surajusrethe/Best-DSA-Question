@@ -104,7 +104,7 @@ When to Use Which Traversal:
 
 
 Inorder Traversal:
-Inorder traversal is used to get the elements of a binary search tree in non-decreasing order.
+Inorder traversal is used to get the elements of a binary search tree in non-decreasing order..
 It's also useful when we want to process the binary tree nodes in a sorted order.
 Additionally, inorder traversal is used to convert a binary search tree into an array, and vice versa.
 Preorder Traversal:
