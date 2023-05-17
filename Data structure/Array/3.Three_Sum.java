@@ -29,7 +29,7 @@ Approach 2: TC = O(n2) & SC = O(n)
 
 
 
-Approach 3:
+Approach 3: 2 pointer
 - 
 - 
 
