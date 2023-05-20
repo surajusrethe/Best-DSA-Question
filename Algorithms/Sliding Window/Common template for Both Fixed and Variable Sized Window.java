@@ -92,7 +92,7 @@ public static int slidingWindow(int[] arr, Integer k, Integer targetSum) {
   
 Note: Har bar poora code likhne ki jaroort nahi hai fixed or variable ke hi saab se modify kar lena.
   
-.....................................................................................................................................................................
+....................................................................................................................................................................
 /*  
 - if you are given a problem that asks you to find the maximum sum of a subarray of size k, you can use this code as is and just pass in the values of arr, k, and null   for targetSum.
   
