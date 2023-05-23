@@ -1,6 +1,6 @@
 Notes:
 
-//A 2D array in Java is an array of arrays where each element is an array. It represents a table-like structure with rows and columns.
+//A 2D array in Java is an array of arrays where each element is an array. It represents a table-like structure with rows & columns.
 //The elements of a 2D array are accessed using two indices: the row index and the column index.
 //The first index represents the row number, and the second index represents the column number.
 //2D arrays can be created and initialized using curly braces {} or with nested loops.
