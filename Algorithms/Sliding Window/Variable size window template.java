@@ -8,7 +8,7 @@
 /*************************************************************************** Code ***************************************************************************/
 
 
-/**
+/*
  * Finds the length of the longest subarray that sums to the target sum.
  *
  * @param nums the input array of integers
