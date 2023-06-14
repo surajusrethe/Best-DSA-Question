@@ -19,8 +19,6 @@ Explanation: The character 'p' have the maximum occurrence i.e 2.
 
 Approach 1: TC = O(n2) , SC = O(1);
 /*
-here's a brief summary of the approach in just 3 points:
-
 Initialize a count variable to 0 and loop through each character in the string.
 For each character, loop through the string again and count how many times it occurs.
 Update the maximum count and corresponding character if the current count is greater than the previous maximum.
