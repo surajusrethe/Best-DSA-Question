@@ -20,7 +20,7 @@
 // 7. Sorting an array: O(n log n).
 // 8. Merging two arrays: O(n).
 
-.........................................................................................................................................................................
+........................................................................................................................................................................
 question link: https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
 
 Given an array A of size N of integers. Your task is to find the minimum and maximum elements in the array.
