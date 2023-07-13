@@ -1,4 +1,4 @@
-/******************************************************** Question ***********************************************************/
+/******************************************************* Question ***********************************************************/
 
 /*
 Find the missing element from an ordered array arr[], consisting of N elements representing an Arithmetic Progression(AP).
