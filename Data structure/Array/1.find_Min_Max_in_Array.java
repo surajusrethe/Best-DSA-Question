@@ -1,4 +1,4 @@
-//Notes:
+//Notes:-
 
 //An array is a collection of elements of the same data type that are stored in contiguous memory locations.
 //The first element in an array has an index of 0.
