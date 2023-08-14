@@ -3,17 +3,13 @@
   *****
    ***
     *
-
-
 /*************************************************** Appraoch ***************************************************/
 
 - Har row ke liye, pehle spaces print karenge. Spaces ke quantity 0 se start hogi aur rows ke hisaab se badhti jayegi.
 - Fir, stars print karenge. Stars ke quantity rows se shuru hogi aur 1 tak kam ho jayegi.
 - Har row ke baad, new line print karenge.
-
-
+ 
 /*************************************************** Code ***************************************************/
-
 
 public class Pattern {
     public static void printTriangle(int n) {
