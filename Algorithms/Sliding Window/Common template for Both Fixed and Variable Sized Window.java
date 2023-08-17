@@ -53,7 +53,7 @@ public static int slidingWindow(int[] arr, Integer k, Integer targetSum) {
         // Add the element at the right pointer to the current sum
         currSum += arr[right];
 
-        // If targetSum is not null, we're looking for a variable size subarray
+        // If targetSum is not null, we're looking for a variable size subarray.
         if (targetSum != null) {
             // While the current sum is greater than the target sum
             while (currSum > targetSum) {
